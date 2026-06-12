@@ -1,0 +1,120 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  z-index: 100;
+  border-bottom: 1px solid var(--border);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.menu-btn {
+  padding: 8px;
+  border-radius: 50%;
+  color: var(--text);
+}
+
+.menu-btn:hover {
+  background: var(--bg-hover);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  flex: 1;
+  max-width: 600px;
+  margin: 0 40px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 8px 16px;
+  background: #121212;
+  border: 1px solid var(--border);
+  border-right: none;
+  border-radius: 40px 0 0 40px;
+  color: var(--text);
+  font-size: 16px;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #1c62b9;
+}
+
+.search-bar button {
+  padding: 0 20px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 0 40px 40px 0;
+  color: var(--text);
+}
+
+.search-bar button:hover {
+  background: var(--bg-hover);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sign-in-btn {
+  display: inline-flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .search-bar {
+    margin: 0 8px;
+    max-width: none;
+  }
+
+  .user-name {
+    display: none;
+  }
+
+  .search-bar input {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar {
+    display: none;
+  }
+}
